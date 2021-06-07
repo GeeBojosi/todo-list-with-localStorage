@@ -91,3 +91,47 @@ export default contents;
       Voluptatem quasi quae nesciunt amet cumque minima laudantium, culpa tenetur fugit? Fugiat consequatur, odio eveniet
       at inventore animi omnis, tenetur corrupti cum quibusdam quas unde error expedita deserunt debitis illo?
     </p>
+
+
+
+
+    // const todos = [];
+
+class Todos {
+  constructor(title, priority) {
+    // Check if any values were provided
+    if (!title && !priority) {
+      throw new Error('No todos were provided');
+    }
+    this.title = title;
+    this.priority = priority;
+    // this._todos = [];
+  }
+
+  get AllTodos() {
+    return this._todos;
+  }
+
+  addTodo() { 
+    
+  }
+
+  createTodo(todoDetail) {
+    // get all todos most recent
+    const todos = this._todos;
+    // push newTodo
+    todos.push(todoDetail);
+
+    return todos;
+  }
+}
+
+const test = () => {
+  const todo1 = new Todos('Water the plants', 1);
+  // todo1.createTodo({ todo: 'Water the plants', priority: 1 });
+  // const todos = todo1.AllTodos;
+  // console.log(todos)
+  console.log(todo1)
+}
+
+test();

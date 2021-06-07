@@ -12,8 +12,21 @@ const createSideBar = () => {
   sideBar.classList.add('sidenav');
   sideBar.innerHTML = `
     <a class="closebtn">×</a>
-    <a href="#">Your Todos</a>
-    <a href="#">Projects</a>
+    <div style="color:#fff" class="collapsible">Today</div>
+    <div class="content">
+      <li>This is just some random content.</li>
+      <li>This is just some random content.</li>
+      <li>This is just some random content.</li>
+      <li>This is just some random content.</li>
+    </div>
+    <hr/>
+    <div style="color:#fff" class="collapsible">Projects</div>
+    <div class="content">
+    <li>This is just some random content.</li>
+    <li>This is just some random content.</li>
+    <li>This is just some random content.</li>
+    <li>This is just some random content.</li>
+  </div>
   `;
   return sideBar;
 }
@@ -27,12 +40,15 @@ const createMain = () => {
       <form class="modal-content" id="myModal">
         <div class="form-contents">
           <h1>Add a Todo</h1>
-          <p>fill in the todo details</p>
           <hr/>
-          <label for="title"><b>Title</b></label>
-          <input type="text" placeholder="Enter title" name="title" required>
-          <label for="desc"><b>Description</b></label>
-          <textarea name="desc" id="description" cols="86" rows="10"></textarea>
+          <input type="text" id="title" placeholder="Title" name="title" required>
+          <select id="priority" required>
+            <option value="" selected>Select Priority</option>
+            <option value="1">priority 1</option>
+            <option value="2">priority 2</option>
+            <option value="3">priority 3</option>
+            <option value="4">priority 4</option>
+          </select>
           <div class="btns">
             <button onclick="document.getElementById('modal').style.display='none'" type="button">Cancel</button>
             <button type="submit">Add Todo</button>
@@ -40,15 +56,9 @@ const createMain = () => {
         </div>
       </form>
     </div>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero iusto est, quasi rerum rem nesciunt architecto
-      dolor unde eveniet, sint eligendi animi numquam ducimus illum sunt provident doloremque molestias fugit.
-      Rem assumenda autem excepturi eos voluptatibus laboriosam reprehenderit recusandae quia! Officia voluptatem velit
-      voluptatum ratione! Culpa modi molestias, vero natus reiciendis harum ipsam aliquam obcaecati dicta quas,
-      consectetur ipsum impedit.
-      Voluptatem quasi quae nesciunt amet cumque minima laudantium, culpa tenetur fugit? Fugiat consequatur, odio eveniet
-      at inventore animi omnis, tenetur corrupti cum quibusdam quas unde error expedita deserunt debitis illo?
-  </p>
+    <div id="todo-list">
+     
+    </div>
     `;
   return main;
 }

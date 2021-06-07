@@ -50,6 +50,7 @@ header h1 a {
   transition: 0.5s;
   padding-top: 60px;
   margin-top: 64px;
+  border-right: 2px steelblue solid;
 }
 
 .sidenav a {
@@ -77,6 +78,21 @@ header h1 a {
   color: red;
 }
 
+.collapsible {
+  background-color: #777;
+  width: 100%;
+  padding: .5rem 0.7rem;
+  cursor: pointer;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  margin: 1rem 0 1rem 1.5rem;
+}
+
 #main {
   /* margin-left: 250px; */
   transition: margin-left .5s;
@@ -97,27 +113,38 @@ header h1 a {
   opacity: 1;
 }
 
+.todo-list {
+  background-color: rgb(245, 245, 245);
+  padding: 0.7rem;
+  box-shadow: -4px 3px 21px -6px rgba(0, 0, 0, 0.61);
+  -webkit-box-shadow: -4px 3px 21px -6px rgba(0, 0, 0, 0.61);
+  -moz-box-shadow: -4px 3px 21px -6px rgba(0, 0, 0, 0.61);
+}
+
+.todo-list .todo {
+  margin: .5rem 1rem 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.todo-list .todo:hover {
+  background-color: rgb(240, 226, 226);
+}
+
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   padding-top: 100px;
-  /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgb(0, 0, 0);
-  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
 }
 
 /* Modal Content */
