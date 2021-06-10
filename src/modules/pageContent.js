@@ -1,15 +1,15 @@
 const createHeader = () => {
-  const header = document.createElement('header');
+  const header = document.createElement("header");
   header.innerHTML = `
     <h1><i class="fas fa-check-double"></i><a href="#">TodoList</a></h1>
     <button id="myBtn">Add Todo</button>
   `;
   return header;
-}
+};
 
 const createSideBar = () => {
-  const sideBar = document.createElement('div');
-  sideBar.classList.add('sidenav');
+  const sideBar = document.createElement("div");
+  sideBar.classList.add("sidenav");
   sideBar.innerHTML = `
     <a class="closebtn">×</a>
     <div style="color:#fff" class="collapsible">Today</div>
@@ -29,11 +29,11 @@ const createSideBar = () => {
   </div>
   `;
   return sideBar;
-}
+};
 
 const createMain = () => {
-  const main = document.createElement('main');
-  main.setAttribute('id', 'main');
+  const main = document.createElement("main");
+  main.setAttribute("id", "main");
   main.innerHTML = `
     <span><i class="fas fa-chevron-right"></i></span>
     <div class="modal" id="modal">
@@ -47,8 +47,8 @@ const createMain = () => {
             <option value="1">priority 1</option>
             <option value="2">priority 2</option>
             <option value="3">priority 3</option>
-            <option value="4">priority 4</option>
           </select>
+          <input id="date" type="date"/>
           <div class="btns">
             <button onclick="document.getElementById('modal').style.display='none'" type="button">Cancel</button>
             <button type="submit">Add Todo</button>
@@ -61,14 +61,14 @@ const createMain = () => {
     </div>
     `;
   return main;
-}
+};
 
 const contents = () => {
   const { body } = document;
-  const container = document.querySelector('#content');
+  const container = document.querySelector("#content");
   body.insertBefore(createHeader(), body.firstChild);
   container.appendChild(createSideBar());
   container.appendChild(createMain());
-}
+};
 
 export default contents;

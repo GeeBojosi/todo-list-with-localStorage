@@ -133,6 +133,29 @@ header h1 a {
   background-color: rgb(240, 226, 226);
 }
 
+.done {
+  text-decoration: line-through;
+  color: #818181;
+}
+
+.del:hover {
+  cursor: pointer;
+  border-radius: 50%;
+  color: red;
+}
+
+.p1 {
+  color: red;
+}
+
+.p2 {
+  color: orange;
+}
+
+.p3 {
+  color: yellow;
+}
+
 .modal {
   display: none;
   position: fixed;
